@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contoh Fundamental JavaScript</h1>
+
+    <table>
+      <tr>
+        <th colspan="2">Input Data</th>
+      </tr>
+      <tr>
+        <td><label for="nama">Nama:</label></td>
+        <td><input type="text" id="nama" name="nama" /></td>
+      </tr>
+      <tr>
+        <td><label for="umur">Umur:</label></td>
+        <td><input type="number" id="umur" name="umur" /></td>
+      </tr>
+      <tr>
+        <td><label for="angka1">Angka Pertama:</label></td>
+        <td><input type="number" id="angka1" name="angka1" /></td>
+      </tr>
+      <tr>
+        <td><label for="angka2">Angka Kedua:</label></td>
+        <td><input type="number" id="angka2" name="angka2" /></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button onclick="tampilkanInfo()">Tampilkan Info</button>
+          <button onclick="tampilkanHasil()">Jumlahkan</button>
+        </td>
+      </tr>
+    </table>
+
+    <p>Hasil: <span id="hasil"></span></p>
+
+    <script>
+      function tampilkanInfo() {
+        var nama = document.getElementById("nama").value;
+        var umur = document.getElementById("umur").value;
+
+        console.log("Nama:", nama, "Umur:", umur);
+      }
+
+      function tampilkanHasil() {
+        var angka1 = parseInt(document.getElementById("angka1").value);
+        var angka2 = parseInt(document.getElementById("angka2").value);
+
+        var hasil = angka1 + angka2;
+
+        document.getElementById("hasil").innerText = hasil;
+      }
+    </script>
+  </body>
+</html>
