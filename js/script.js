@@ -47,3 +47,20 @@ function showSlider(type){
         next.click();
     }, timeAutoNext)
 }
+
+// JSDasar
+function tampilkanInfo() {
+        var nama = document.getElementById("nama").value;
+        var umur = document.getElementById("umur").value;
+
+        console.log("Nama:", nama, "Umur:", umur);
+      }
+
+      function tampilkanHasil() {
+        var angka1 = parseInt(document.getElementById("angka1").value);
+        var angka2 = parseInt(document.getElementById("angka2").value);
+
+        var hasil = angka1 + angka2;
+
+        document.getElementById("hasil").innerText = hasil;
+      }
